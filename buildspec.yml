@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+
+  build:
+    commands:
+      - echo "Creating Lambda Layer ZIP"
+      - zip -r layer.zip python
+
+artifacts:
+  files:
+    - layer.zip
